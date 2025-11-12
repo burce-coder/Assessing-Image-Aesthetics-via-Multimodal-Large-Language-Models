@@ -16,10 +16,12 @@ Thank you for your attention. The paper has been uploaded to the repository, and
 
 ## If you find our work is useful, pleaes cite our paper:
 ```
-@article{MaRegression,
-  title={Regression Over Classification: Assessing Image Aesthetics via Multimodal Large Language Models},
-  author={Ma, Xingyuan and He, Shuai and Ming, Anlong and Zhong, Haobin and Ma, Huadong},
-  journal={the 40th AAAI Conference on Artificial Intelligence (AAAI)},
-  year={2026},
+@inproceedings{MaRegression,
+  title     = {Regression Over Classification: Assessing Image Aesthetics via Multimodal Large Language Models},
+  author    = {Ma, Xingyuan and He, Shuai and Ming, Anlong and Zhong, Haobin and Ma, Huadong},
+  booktitle = {Proceedings of the 40th AAAI Conference on Artificial Intelligence (AAAI)},
+  year      = {2026},
+  note      = {Oral},
+  url       = {https://github.com/chasecjg/ICTA2Net/tree/main}
 }
 ```
