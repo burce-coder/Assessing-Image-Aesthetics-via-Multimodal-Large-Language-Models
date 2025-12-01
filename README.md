@@ -1,6 +1,8 @@
 # Assessing-Image-Aesthetics-via-Multimodal-Large-Language-Models
 
-Thank you for your attention. The paper has been uploaded to the repository, and the code will be released around the end of November. 感谢各位同仁们的关注，论文已上传至该仓库，代码将在11月底左右发布。
+Thank you for your attention. The paper, code, and weights have all been uploaded to this repository, and a more detailed introduction will be released soon.
+
+感谢各位同仁们的关注，论文、代码和权重均已上传至该仓库，更详细的介绍会于近日发布。
 
 <div align="center">
 <img width="1135" height="336" alt="wechat_2025-11-12_091035_423" src="https://github.com/user-attachments/assets/badacf0e-d3ec-4805-ab26-e2dfc6779020" />
