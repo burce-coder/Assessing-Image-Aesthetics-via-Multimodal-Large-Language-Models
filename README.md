@@ -19,7 +19,7 @@ Beijing University of Posts and Telecommunications
 -----------------------------------------
 
 
-[[国内的小伙伴可以看这]](https://github.com/woshidandan)
+[国内的小伙伴可以看这](https://github.com/woshidandan/Assessing-Image-Aesthetics-via-Multimodal-Large-Language-Models/blob/711414fd28f1377fc6bbe5a4ea8d6d79a64c429b/README_CN.md)
 This repo contains the official implementation of the **AAAI 2026** paper.
 
 ## Introduction
@@ -43,7 +43,7 @@ Extensive experiments across five datasets demonstrate ROC4MLLM’s state-of-the
 ## Usage
 
 ### Install
-1. Clone this repository and navigate to mPLUG-Owl2 folder
+1. Clone this repository and navigate to ROC4MLLM folder
 ```bash
 git clone https://github.com/woshidandan/Assessing-Image-Aesthetics-via-Multimodal-Large-Language-Models.git
 cd ROC4MLLM
