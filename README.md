@@ -26,8 +26,9 @@ This repo contains the official implementation of the **AAAI 2026** paper.
 Image Aesthetics Assessment (IAA) evaluates visual quality through user-centered perceptual analysis and can guide various applications. Recent advances in Multimodal Large Language Models (MLLMs) have sparked interest in adapting them for IAA. However, two critical limitations persist in applying MLLMs to IAA: 
   1) the tokenization strategy leads to insensitivity to scores
   2) the classification-based decoding mechanisms introduce score quantization errors
+  3) Current MLLM-based IAA methods treat the task as coarse rating classification followed by probability-to-score mapping, which loses fine-grained information. 
 
-Current MLLM-based IAA methods treat the task as coarse rating classification followed by probability-to-score mapping, which loses fine-grained information. To address these challenges, we propose ROC4MLLM, offering complementary solutions from two perspectives:
+To address these challenges, we propose ROC4MLLM, offering complementary solutions from two perspectives:
   1) Representation: We separate scores from the word token space to avoid tokenizing scores as text. An independent position token bridges these spaces, improving the model’s sensitivity to score positions in text.
   2) Computation: We apply distinct loss functions for text and score predictions to enhance the model’s sensitivity to score gradients. Decoupling scores from text ensures effective supervision while preventing interference between scores and text in the loss computation.
 
