@@ -36,7 +36,7 @@ Beijing University of Posts and Telecommunications
 
 
 ## 权重
-* 权重下载地址 [Baidu Netdisk](https://pan.baidu.com/s/1GwX6AEsJ3txDpxPeCdY6LA?pwd=bupt). 
+* 权重下载地址 [Baidu Netdisk](https://pan.baidu.com/s/1GwX6AEsJ3txDpxPeCdY6LA?pwd=bupt) / [HuggingFace](https://huggingface.co/Ricardo-M/ROC4MLLM). 
 * 直接可运行的Docker环境 [Baidu Netdisk](https://pan.baidu.com/s/1IjRsT691hom9naxtjlIzKw?pwd=bupt).  
 
 ## 使用
