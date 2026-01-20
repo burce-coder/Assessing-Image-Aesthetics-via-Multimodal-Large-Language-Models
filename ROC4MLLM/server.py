@@ -1,4 +1,6 @@
-from fastapi import FastAPI
+import os
+import tempfile
+from fastapi import FastAPI, UploadFile, File
 from mplug_owl2.assessor import Assessment
 from PIL import Image
 
