@@ -1,6 +1,7 @@
 import os
 import json
 import argparse
+import shutil
 from PIL import Image
 from tqdm import tqdm
 from mplug_owl2.assessor import Assessment
