@@ -4,7 +4,7 @@ from fastapi import FastAPI, UploadFile, File
 from mplug_owl2.assessor import Assessment
 from PIL import Image
 
-assessment=Assessment(pretrained="/home/mxy/ROC4MLLM_weights")
+assessment=Assessment(pretrained="models")
 
 app = FastAPI(title="ROC4MLLM")
 
