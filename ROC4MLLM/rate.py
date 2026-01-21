@@ -1,7 +1,6 @@
 import os
 import json
 import argparse
-import shutil
 from PIL import Image
 from tqdm import tqdm
 from mplug_owl2.assessor import Assessment
@@ -18,13 +17,6 @@ def main():
                         help="Path to pretrained model weights")
     parser.add_argument("-p", "--precision", type=int, default=4,
                         help="Number of decimal places for the score")
-    # Threshold and classification arguments
-    parser.add_argument("-t", "--threshold", type=float, default=5.5,
-                        help="Score threshold for qualification (default: 5.5)")
-    parser.add_argument("--passed_dir", type=str, default="passed",
-                        help="Directory name for qualified images")
-    parser.add_argument("--failed_dir", type=str, default="failed",
-                        help="Directory name for unqualified images")
 
     args = parser.parse_args()
 
@@ -45,10 +37,6 @@ def main():
         else:
             final_output_path = os.path.join(parent_dir, args.output_json)
     # ----------------------------------------
-
-    # Determine absolute paths for passed/failed directories
-    passed_root = os.path.join(parent_dir, args.passed_dir)
-    failed_root = os.path.join(parent_dir, args.failed_dir)
 
     # 2. Initialize Model
     print(f"Loading model from: {args.model_path} ...")
@@ -87,31 +75,12 @@ def main():
             input_img = [img]
 
             # Based on your server.py: returns (comment_list, score_list)
-            answer, score_list = assessment(input_img, precision=args.precision)
-            score = score_list[0]
-            comment = answer[0]
-
-            # Threshold logic and target path determination
-            if score >= args.threshold:
-                target_base = passed_root
-                status = "passed"
-            else:
-                target_base = failed_root
-                status = "failed"
-
-            # Build destination path while maintaining folder structure
-            dest_path = os.path.join(target_base, rel_path)
-            os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-
-            # Copy the file (preserving metadata)
-            shutil.copy2(full_path, dest_path)
+            answer, score = assessment(input_img, precision=args.precision)
 
             results.append({
                 "file_path": rel_path,
-                "new_path": os.path.normpath(dest_path),
-                "status": status,
-                "score": score,
-                "comment": comment
+                "score": score[0],
+                "comment": answer[0]
             })
 
         except Exception as e:
@@ -126,10 +95,7 @@ def main():
     with open(final_output_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=4, ensure_ascii=False)
 
-    print(f"\n✅ Processing complete!")
-    print(f"📊 Results saved to: {final_output_path}")
-    print(f"📁 Qualified images copied to: {passed_root}")
-    print(f"📁 Unqualified images copied to: {failed_root}")
+    print(f"\n✅ Assessment finished! Results saved to: {args.output_json}")
 
 
 if __name__ == "__main__":
