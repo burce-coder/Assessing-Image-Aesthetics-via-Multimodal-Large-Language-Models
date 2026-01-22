@@ -46,7 +46,7 @@ Extensive experiments across five datasets demonstrate ROC4MLLM’s state-of-the
 ### Install
 1. Clone this repository and navigate to ROC4MLLM folder
 ```bash
-git clone https://github.com/woshidandan/Assessing-Image-Aesthetics-via-Multimodal-Large-Language-Models.git
+git clone https://github.com/burce-coder/Assessing-Image-Aesthetics-via-Multimodal-Large-Language-Models.git
 cd ROC4MLLM
 ```
 
@@ -62,6 +62,12 @@ pip install -e .
 ```
 pip install -e ".[train]"
 pip install flash-attn --no-build
+```
+
+4. get models
+```
+git lfs install
+git clone https://huggingface.co/Ricardo-M/ROC4MLLM models
 ```
 
 ### Quick Start Code
